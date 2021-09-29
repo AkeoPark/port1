@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>한국지식재산보호원-알림마당</title>
+<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+<![endif]-->
+<!-- [if IE 7]> <link href="ie7.css" type="text/css" rel="stylesheet"/> <![endif]-->
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/sub03.css" />
+	<script defer src="js/gnb.js"></script>
+	<script defer src="js/script.js"></script>
+	<script>
+
+( function( $ ) {
+$( document ).ready(function() {
+$('#cssmenu > ul > li > a').click(function() {
+  $('#cssmenu li').removeClass('active');
+  $(this).closest('li').addClass('active');	
+  var checkElement = $(this).next();
+  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+    $(this).closest('li').removeClass('active');
+    checkElement.slideUp('normal');
+  }
+  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+    $('#cssmenu ul ul:visible').slideUp('normal');
+    checkElement.slideDown('normal');
+  }
+  if($(this).closest('li').find('ul').children().length == 0) {
+    return true;
+  } else {
+    return false;	
+  }		
+});
+});
+} )( jQuery );
+
+	</script>
+
+</head>
+<body>
+	<div id="header">
+		<h1 class="hlogo"><a href="index.html"><img src="images/koipalogo.png" alt="상단로고" /></a></h1>
+		<ul class="hlnb">
+			<li><a href="login.html">로그인</a></li>
+			<li><a href="#">사이트맵</a></li>
+		</ul> <!-- hlnb end -->
+	
+		<div id="hWrap">
+			 <div id="mheader">
+				<div id="gnb">
+				 <nav class="glist">
+				 <ul> 
+					<li><a href="sub01.html">KOIPA소개</a>
+					 <ul>
+						<li><a href="sub01.html">인사말</a></li>
+						<li><a href="#">설립목적 및 연혁</a></li>
+						<li><a href="#">미션&비전</a></li>
+						<li><a href="#">조직도</a></li>
+						<li><a href="#">윤리경영</a></li>
+						<li><a href="#">경영공시</a></li>
+						<li><a href="#">오시는 길</a></li>
+						<li><a href="#">홍보자료</a></li>
+					 </ul>
+					</li><!-- KOIPA소개 end -->
+	
+					<li><a href="sub02.html">주요사업</a>
+					 <ul>
+						<li><a href="#">국제 지재권분쟁 대응전략</a></li>
+						<li><a href="#">국내 위조상품 단속지원</a></li>
+						<li><a href="#">지식재산권보호 인식제고</a></li> 
+						<li><a href="#">국제IP분쟁대응기반 구축</a></li>
+						<li><a href="#">사회적약자의 지재권 보호지원</a></li>
+						<li><a href="#">K-브랜드 보호지원</a></li>
+						<li><a href="#">지재권 분쟁 공동대응 지원</a></li>
+						<li><a href="#">해외 온라인 위조상품 대응지원</a></li>
+						<li><a href="#">영업비밀 보호지원</a></li>
+					 </ul>
+					</li><!-- 주요사업 end -->
+	
+					<li><a href="sub03.html">알림마당</a>
+						 <ul>
+							<li><a href="sub03.html">공지사항</a></li>
+							<li><a href="#">사업공고</a></li>
+							<li><a href="#">입찰공고</a></li>
+							<li><a href="#">채용공고</a></li>
+							<li><a href="#">정보화사업안내</a></li>
+							<li><a href="#">세미나/행사일정</a></li>
+							<li><a href="#">업무협력현황</a></li>
+						 </ul>
+					</li><!-- 알림마당 end -->
+	
+					<li><a href="sub04.html">참여마당</a>
+					 <ul>
+						<li><a href="#">클린신고센터</a></li>
+						<li><a href="#">고객제안</a></li>
+						<li><a href="#">자료실</a></li>
+						<li><a href="#">법령정보</a></li>
+					 </ul>
+					</li><!-- 참여마당 end -->
+					<li><a href="sub05.html">정보공개</a>
+						<ul>
+							<li><a href="sub05.html">제도안내</a></li>
+							<li><a href="#">사전정보공개</a></li>
+							<li><a href="#">사업실명제</a></li>
+							<li><a href="#">공공데이터개방</a></li>
+						 </ul>
+					</li> <!-- 정보공개 end -->
+				 </ul> 
+				 </nav>
+				</div><!-- gnb end -->
+			 </div><!-- mheader end -->
+		</div><!-- hwrap end -->
+	
+		<p class="schbtn"><a href="#"><img src="images/search.png" alt="검색" /></a></p>
+		<div class="search_form">
+			 <strong class="blind">통합검색</strong>
+			 <div class="layout">
+				 <div class="cell">
+					 <div class="elem">
+						 <p><strong>통합검색</strong><span>한국지식재산보호원 사이트 방문을 환영합니다!</span></p>
+						 <div class="form">
+							 <form target="_blank" action="/search/search.do">
+								 <label for="search_txt" class="blind">검색어</label>
+								 <input type="text" name="kw" id="search_txt" placeholder="검색어를 입력하세요." title="검색어를 입력하세요." />
+								 <input type="submit" value="검색" />
+							 </form>
+							 </div><!-- elem end -->
+						 </div><!-- cell end -->
+					 </div><!-- layout end -->
+				 </div>
+			 
+			 <a href="#" class="btn_close">닫기</a>
+		 </div><!-- search_form end -->
+				 <script>
+		 //search
+			 $('.schbtn').click(function(){
+			$('.search_form').css('display','block');
+	
+			 });
+			 $('.btn_close').click(function(){
+			$('.search_form').css('display','none');
+	
+			 });
+			 
+			 //search end
+		 </script>
+	</div> <!-- header end -->
+	
+	<div id="visual">
+	  <img src="images/sub2_vis.jpg" alt="서브비쥬얼">
+	</div><!-- visual end -->
+	
+	
+	
+
+	  <div id="container">
+	    <nav class="pagenav">
+			<ul>
+			<li><a href="index.html">홈</a></li>
+			<li><a href="sub03.html">참여마당</a></li>
+			<li><a href="sub03.html">공지사항</a></li>
+			</ul>  
+	   </nav> <!-- pagenav end -->
+	  <div class="left">
+
+		 
+	  <div id='cssmenu'>
+        <ul>
+        <li class='active'><a href='#'><span>공지사항</span></a></li>
+        <li class='last'><a href='#'><span>사업공고</span></a></li> 
+        <li class='last'><a href='#'><span>입찰공고</span></a></li> 
+        <li class='last'><a href='#'><span>채용공고</span></a></li> 
+        <li class='last'><a href='#'><span>정보화사업안내</span></a></li> 
+        <li class='last'><a href='#'><span>세미나/행사일정</span></a></li> 
+        <li class='last'><a href='#'><span>업무협력현황</span></a></li> 
+    </div>
+
+	  </div> <!-- left end -->
+	  <div class="right">
+	   <div class="tit">
+			<h3>공지사항</h3>
+			<ul>
+				<li><a href="#"><img src="images/share.png" alt="공유"></a></li>
+				<li><a href="#"><img src="images/print.png" alt="출력"></a></li>
+			</ul>
+	   </div>
+	   <hr>
+      <div class="cont4">
+           <div class="board_search">
+               <div class="count">
+                   <strong>총 게시물 :</strong>
+                   <span class="total">387</span>
+                   <span>1</span>/39
+               </div>
+                <form action="search.php" id="searchForm">
+                    <select name="searchCondition" id="cont_kind">
+                        <option value="">전체</option>
+                        <option value="1">제목</option>
+                        <option value="2">작성자</option>
+                        <option value="3">내용</option>
+                    </select>
+                    <input type="text" name="searchInput" class="searchInput">
+                    <input type="submit" class='searchBtn' value="검색">
+                </form>
+            </div>  
+            <table class="noticelist" summary="게시판" border="0" >
+                <caption class="blind">공지사항</caption>
+                <thead>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                    <th>첨부파일</th>
+                </thead>
+                <tbody>
+                    <tr class="gongji">
+                        <td>공지</td>
+                        <td><a href="#">[한국특허정보원] PATINEX 2021 안내</td>
+													<td>2021/09/01</td>
+                        <td class="file">유</td>
+                    </tr>
+                    <tr class="gongji">
+                        <td>공지</td>
+                        <td><a href="#">한국지식재산보호원 창립기념일 휴무 안내</td>
+													<td>2021/08/04</td>
+                        <td class="file">유</td>
+                    </tr>
+                    <tr class="gongji">
+                        <td>공지</td>
+                        <td><a href="#">[특허정보진흥센터] 특허정보진흥센터 상임이사(본부장) 공모</td>            
+													<td>2021/08/03</td> 
+                        <td class="file">유</td>
+                    </tr>
+                    <tr class="gongji">
+                        <td>공지</td>
+                        <td><a href="#">[한국발명진흥회] 2021년 우수상표디자인권 공모전 출품 신청 안내 공고</td>            
+													<td>2021/07/16</td>  
+                        <td class="file">유</td>
+                    </tr>
+                    <tr class="gongji">
+                        <td>공지</td>
+                        <td><a href="#">[한국발명진흥회] 2021 대한민국 발명특허대전 출품 신청 접수 안내</td>         
+													<td>2021/07/16</td> 
+                        <td class="file">유</td>
+                    </tr>
+                    <tr class="gongji">
+                        <td>공지</td>
+                        <td><a href="#">2021년 해외 출원등록 지원사업 2차 지원기업 선정결과 공지</td>            
+													<td>2021/07/08</td>  
+                        <td class="file">유</td>
+                    </tr>
+                    <tr>
+                        <td>381</td>
+                        <td><a href="#">[전남대학교] 광주,전남 지식재산 전문인력양성센터 초빙교수 채용 공고</td>            
+													<td>2021/06/30</td>
+                        <td class="file">유</td>
+                    </tr>
+                    <tr>
+                        <td>380</td>
+                        <td><a href="#">사이버침해(랜섬웨어, 피싱, 디도스) 신고사례 및 피해 예방법</td>            
+													<td>2021/06/21</td> 
+                        <td class="file">유</td>
+                    </tr>
+                    <tr>
+                        <td>379</td>
+                        <td><a href="#">2021년 식품의약안전처 의약품 허가특허연계제도 교육 공고</td>            
+													<td>2021/05/17</td> 
+                        <td class="file">유</td>
+                    </tr>
+                    <tr>
+                        <td>378</td>
+                        <td><a href="#">2021년 해외 출원등록 지원사업 지재권 보호 온라인 세미나</td>            
+													<td>2021/05/13</td>
+                        <td class="file">유</td>
+                    </tr>
+
+                </tbody>
+            </table><!--noticelist end -->
+            <div class="boardnav">
+				<ul>
+					<li class="pageup chevicon"><a href="#">맨 처음</a></li>
+					<li class="prevlist chevicon"><a href="#">이전</a></li>
+					<li  class="active"><a href="#">1</a></li>
+					<li ><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li  class="nextlist chevicon"><a href="#">다음</a></li>
+					<li class="pagedown chevicon"><a href="#">맨 끝</a></li>					
+				</ul>
+
+            </div>
+	   </div> <!-- cont4 end -->
+		 <div class="satis">
+			<!-- 만족도 평가 start -->
+			<div class="below">
+				 <ul>
+				  <li>담당부서 : 고객서비스팀</li>
+				  <li>☎ : 02-2183-5800</li>
+				  <li><i class="far fa-clock"></i> 최근 수정일 : 2021-08-26</li>
+				 </ul>
+			 </div><!-- below -->
+			 <div class="under">
+			  <p class="un_tit">이 페이지에서 제공하는 정보에 대하여 만족하십니까?</p>
+				
+		  <form>
+				
+				<fieldset>
+					<legend>만족도조사</legend>
+					<input type="radio" value="5" name="satis" id="r1">
+					<label for="r1">매우만족</label>
+
+					<input type="radio" value="4" name="satis" id="r2">
+					<label for="r2" >만족</label>
+
+					<input type="radio" value="3" name="satis" id="r3">
+					<label for="r3" >보통</label>
+
+					<input type="radio" value="2" 
+					name="satis" id="r4">
+					<label for="r4" >불만족</label>
+
+					<input type="radio" value="1" name="satis" id="r5">
+					<label for="r5" >매우불만족</label>
+
+					<input class="sch" type="text" placeholder="여러분의 의견을 남겨주세요" >
+					<input class="schBtn" type="submit" value="제출">
+
+				</fieldset>
+			
+					
+			  </form>
+			 </div><!-- under -->
+		 </div><!-- satis end -->
+	  </div> <!-- right end -->
+	</div><!-- container end -->
+	
+	<div id="footer">
+		<div class="finner">
+			<h1 class="flogo"><img src="images/koipalogogr.png" alt="하단로고"></h1>
+			<ul class="flnb">
+			 <li><a href="#">개인정보처리방침</a></li>
+			 <li><a href="#">찾아오시는길</a></li>
+			 <li><a href="#">이메일 무단수집 금지</a></li>
+			 <li><a href="#">영상정보처리기운영・관리방침</a></li>
+			</ul><!-- flnb end -->
+			<address class="fadd">
+				서울특별시 강남구 테헤란로 131 (역삼동, 한국지식재산센터 6층)<br>
+				TEL. 02-2183-5800&nbsp;|&nbsp;FAX. 02-2183-5899 <br>
+				COPYRIGHT 2015 &copy; KIPRA ALL RIGHTS RESERVED.</p>
+			</address>
+			<select name="site1" id="site1">
+			 <option value="">관련기관사이트</option>
+			 <option value="산업재산권 분쟁조정위원회">산업재산권 분쟁조정위원회</a></option>
+			 <option value="공익변리사 특허상담센터">공익변리사 특허상담센터</a></option>
+			 <option value="대한민국국회">대한민국국회</option>
+			</select>  
+			<p class="mark"><img src="images/wa_mark.png" alt="웹접근성인증마크" /></p>
+	
+		<div class="top">
+		<a href="#" style="color:white"><i class="fas fa-chevron-up fa-2x"></i></a>
+		</div>
+			</div><!-- finner end -->
+	</div><!-- footer end -->
+</body>
+</html>
